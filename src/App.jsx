@@ -13,6 +13,9 @@ function App() {
         <Link to="services">
           <Button colorScheme="blue" m={{md:'10px', lg:'15px'}}>Services</Button>
         </Link>
+        <Link to="socials">
+          <Button colorScheme="blue" m={{md:'10px', lg:'15px'}}>Socials</Button>
+        </Link>
       </Box>
       <Outlet />
     </>
