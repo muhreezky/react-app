@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Stack, Text, Link } from "@chakra-ui/react";
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 function Socials() {
@@ -8,22 +8,28 @@ function Socials() {
       <Text fontSize="3xl" fontWeight="bolder" mb="6">
         Find Me on Social Networks
       </Text>
-      <Box display="grid" gridTemplateRows="1fr 1fr 1fr" gap={12}>
-        <Button colorScheme="purple" size="xl">
-          <Text fontSize="3xl">
-            <FaInstagram />
-          </Text>
-        </Button>
-        <Button colorScheme="linkedin" size="xl">
-          <Text fontSize="3xl">
-            <FaLinkedin />
-          </Text>
-        </Button>
-        <Button colorScheme="whatsapp" size="xl">
-          <Text fontSize="3xl">
-            <FaWhatsapp />
-          </Text>
-        </Button>
+      <Box display="flex" flexDirection={"column"}>
+        <Link href="https://instagram.com/muh.reezky" isExternal>
+          <Button h colorScheme="purple" size="xl" px="7" py="3" m="auto" mb="4" width="full">
+            <Text fontSize="3xl" display="flex" justifyContent="left" alignItems="left">
+              <FaInstagram /> &nbsp; @muh.reezky
+            </Text>
+          </Button>
+        </Link>
+        <Link href="https://linkedin.com/in/muhreezky" isExternal>
+          <Button colorScheme="linkedin" size="xl" px="7" py="3" m="auto" mb="4" width="full">
+            <Text fontSize="3xl" display="flex" justifyContent="left" alignItems="left">
+              <FaLinkedin /> &nbsp; Muhammad Rizkiansyah
+            </Text>
+          </Button>
+        </Link>
+        <Link href="https://wa.me/6281380110502" isExternal>
+          <Button colorScheme="whatsapp" size="xl" px="7" py="3" m="auto" mb="4" width="full">
+            <Text fontSize="3xl" display="flex" justifyContent="left" alignItems="left">
+              <FaWhatsapp /> &nbsp; +6281380110502
+            </Text>
+          </Button>
+        </Link>
       </Box>
     </>
   )
